@@ -1,4 +1,4 @@
-<meta charset="utf-8"><body style="max-width:640px;margin:0 auto;padding:16px;"><h2 style="text-align:center;color:#666;">▼ 封面</h2><img src="https://i.imgur.com/frFYeqm.jpeg" style="max-width:100%;"><hr><p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">10 月 28 日下午，一条帖子在程序员时间线刷屏。</p>
+<meta charset="utf-8"><body style="max-width:640px;margin:0 auto;padding:16px;"><h2 style="text-align:center;color:#666;">▼ 封面</h2><img src="cover_0.png" style="max-width:100%;"><hr><p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">10 月 28 日下午，一条帖子在程序员时间线刷屏。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">一位自称曾在 Cursor 工作、现在 SpaceX AI 做高级工程师的姑娘，分享了她的人工智能工作流：</p>
 <li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;">1 个 AI 总管：统筹所有工作</li>
 <li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;">3 个 AI 项目经理：分配任务、协调进度</li>
@@ -7,7 +7,7 @@
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">评论区清一色“mark”“未来已来”。有人激动地总结：以后一个人就是一家软件公司。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">我第一反应也是哇塞。但把中外社区这两天的实测数据、工程讨论翻了一遍之后，我想说句扫兴的话：</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong style="color:#1a1a1a;">这条帖子的故事，你大概率抄不了。但它背后的问题——你的工作流到底该不该上多 Agent——值得认真算一笔账。</strong></p>
-<p style="margin:0;"><img src="https://i.imgur.com/It13CN1.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="margin:0;"><img src="error_amplify_0.png" style="max-width:100%;display:block;margin:16px auto;"></p>
 <h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">一、先泼冷水：这个故事本身有几个对不上的地方</h2>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">第一个疑点：主帖本身只有几百赞、几百转发，但短短两天内，至少 4 个不同账号用几乎一模一样的文案复读了一遍。措辞、数字、“60 分钟教程”“原价 5000 美元现在免费”的话术，全都一样。这是典型的病毒营销模板，不是个人分享。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">第二个疑点：人物对不上。AI Engineer 大会上确实有一位在 Cursor 做过 agent harness、现在在 SpaceX AI 的工程师（Jediah Katz）发表过演讲——但那是一位男性工程师，讲的也不是“50 个 agent 开公司”，而是技术性很强的框架演进问题。热帖把真实存在的人和编造的故事缝在了一起，这是最近 AI 营销号最爱用的手法：七分真，三分编。</p>
@@ -17,7 +17,7 @@
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">故事是编的，但“该不该上多 Agent”这个问题，社区沉淀了一组硬得多的数据。三张账单，一张比一张疼。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第一张：17 倍的错误放大。</strong></p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">多组编排实验的汇总结论：独立并行的多 Agent 会把错误放大约 17.2 倍。道理很简单——没人互相检查作业时，每个 Agent 的幻觉都会变成下一个环节的输入。40 个 AI 员工里只要 3 个在认真编造，你的整条流水线就在批量生产看起来很对的垃圾。</p>
-<p style="margin:0;"><img src="https://i.imgur.com/haZ4KtP.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="margin:0;"><img src="bills2_0.png" style="max-width:100%;display:block;margin:16px auto;"></p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第二张：15 倍的 Token 开销。</strong></p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">实测口径：多 Agent 方案的 Token 消耗约为单 Agent 的 15 倍。按 API 计费，“跑一个长任务一天烧几十刀”是多 Agent 用户的日常；按订阅套餐，15 倍意味着你的月配额可能一夜烧光。热帖里“喝杯咖啡验收一切”的画面，翻译成账单就是：咖啡钱不要紧，Token 账单要紧。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第三张：成功率门槛，45%。</strong></p>
@@ -31,7 +31,7 @@
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>坑二：配置文件被静默覆盖。</strong>有一阵构建莫名失败，查下来是一个 agent 把测试数据直接写在了真的 Dockerfile 上，而那个目录根本没被版本控制跟踪。他的解法：给关键文件做哈希校验，一旦意外变更就当场报错——护栏必须在犯错的那一刻大声失败，而不是三步之后的代码评审里。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>坑三，也是最贵的一个：他造了 7 个产品，没有一个人要。</strong>他的 agent 舰队特别擅长“造东西”，几周内上线了 7 个真工具，测试齐全、部署完毕。但他复盘发现：每一个都是因为“市场看起来有需求”而造的，没有一个来自真实用户的拉力。凡是 push 出来的产品都是空心的，凡是 pull（他自己真的需要）出来的都活了下来。所以他给组织加了一道闸门：每个新构建开工前必须回答一个问题——“谁拉的这个？”他甚至设了一个只读 agent，存在的意义就是跟他说“不”。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">这个坑比 Token 账单贵多了。</p>
-<p style="margin:0;"><img src="https://i.imgur.com/L4XCB3q.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="margin:0;"><img src="compare_0.png" style="max-width:100%;display:block;margin:16px auto;"></p>
 <h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">四、那普通人到底该怎么用？</h2>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">结论不是“别用多 Agent”，而是：<strong>多 Agent 解决的是并行，不是能力；放大的是产能，也是错误。</strong></p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">真实的可行路径，其实朴素得多：</p>
@@ -41,7 +41,7 @@
 <li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>上护栏，趁早。</strong>看门狗、文件哈希、loud failure。Agent 的失败模式你永远想不到，护栏不是成本，是睡眠质量。</li>
 <li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>算 Token 账，别算情绪账。</strong>上并行之前先问：这 15 倍开销买来的速度，对这件具体的事值不值？</li>
 </ol>
-<p style="margin:0;"><img src="https://i.imgur.com/7nUeKUX.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="margin:0;"><img src="decision_0.png" style="max-width:100%;display:block;margin:16px auto;"></p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">回到那条刷屏的帖子。它真正的价值不是那个“喝咖啡管理 AI 团队”的爽文画面，而是它逼每个人直面一个问题：</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">当造东西的成本趋近于零，稀缺的不再是执行力，而是判断力——知道什么值得造。</p>
 <p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">那位独立开发者烧了几周才学会的，不是怎么指挥 20 个 agent，而是怎么让其中一个 agent 对自己说“不”。</p>
