@@ -1,38 +1,49 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Site</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #e2e8f0;
-    }
-    main { text-align: center; padding: 2rem; }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    p { color: #94a3b8; line-height: 1.8; }
-    code {
-      background: rgba(148, 163, 184, 0.15);
-      padding: 0.2em 0.5em;
-      border-radius: 4px;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>部署通道已就绪</h1>
-    <p>
-      这是 agent-site 的占位页。<br>
-      Agent 推送新的 <code>index.html</code> 后，此页面会自动更新。
-    </p>
-  </main>
-</body>
-</html>
+<meta charset="utf-8"><body style="max-width:640px;margin:0 auto;padding:16px;"><h2 style="text-align:center;color:#666;">▼ 封面</h2><img src="https://i.imgur.com/frFYeqm.jpeg" style="max-width:100%;"><hr><p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">10 月 28 日下午，一条帖子在程序员时间线刷屏。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">一位自称曾在 Cursor 工作、现在 SpaceX AI 做高级工程师的姑娘，分享了她的人工智能工作流：</p>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;">1 个 AI 总管：统筹所有工作</li>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;">3 个 AI 项目经理：分配任务、协调进度</li>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;">40 多个 AI 员工：通宵自动执行任务</li>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">她每天早上泡杯咖啡，验收整晚的成果。还说 97% 的同事已经在用类似的方式工作。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">评论区清一色“mark”“未来已来”。有人激动地总结：以后一个人就是一家软件公司。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">我第一反应也是哇塞。但把中外社区这两天的实测数据、工程讨论翻了一遍之后，我想说句扫兴的话：</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong style="color:#1a1a1a;">这条帖子的故事，你大概率抄不了。但它背后的问题——你的工作流到底该不该上多 Agent——值得认真算一笔账。</strong></p>
+<p style="margin:0;"><img src="https://i.imgur.com/It13CN1.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">一、先泼冷水：这个故事本身有几个对不上的地方</h2>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">第一个疑点：主帖本身只有几百赞、几百转发，但短短两天内，至少 4 个不同账号用几乎一模一样的文案复读了一遍。措辞、数字、“60 分钟教程”“原价 5000 美元现在免费”的话术，全都一样。这是典型的病毒营销模板，不是个人分享。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">第二个疑点：人物对不上。AI Engineer 大会上确实有一位在 Cursor 做过 agent harness、现在在 SpaceX AI 的工程师（Jediah Katz）发表过演讲——但那是一位男性工程师，讲的也不是“50 个 agent 开公司”，而是技术性很强的框架演进问题。热帖把真实存在的人和编造的故事缝在了一起，这是最近 AI 营销号最爱用的手法：七分真，三分编。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">第三个疑点，也是评论区最高赞点破的：<strong>“感觉这得需要无限 Token 模式。”</strong></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">50 个 agent 通宵跑，这不是工作流，这是钞能力。她未必撒谎，但她的前提大概率是你没有的。</p>
+<h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">二、三张账单：别人已经替你踩过坑了</h2>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">故事是编的，但“该不该上多 Agent”这个问题，社区沉淀了一组硬得多的数据。三张账单，一张比一张疼。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第一张：17 倍的错误放大。</strong></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">多组编排实验的汇总结论：独立并行的多 Agent 会把错误放大约 17.2 倍。道理很简单——没人互相检查作业时，每个 Agent 的幻觉都会变成下一个环节的输入。40 个 AI 员工里只要 3 个在认真编造，你的整条流水线就在批量生产看起来很对的垃圾。</p>
+<p style="margin:0;"><img src="https://i.imgur.com/haZ4KtP.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第二张：15 倍的 Token 开销。</strong></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">实测口径：多 Agent 方案的 Token 消耗约为单 Agent 的 15 倍。按 API 计费，“跑一个长任务一天烧几十刀”是多 Agent 用户的日常；按订阅套餐，15 倍意味着你的月配额可能一夜烧光。热帖里“喝杯咖啡验收一切”的画面，翻译成账单就是：咖啡钱不要紧，Token 账单要紧。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>第三张：成功率门槛，45%。</strong></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">单 Agent 任务成功率超过约 45% 之后，再加 Agent 的边际收益趋近于零，甚至为负。换句话说：如果你的单 Agent 都干不明白一件事，拆成 40 个 Agent 只会干得更不明白。多 Agent 不是能力放大器，是并行分发器——前提是每个节点单兵作战本来就靠谱。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">连 Anthropic 自己都交过学费：客服场景拆了十几个“专家子 Agent”之后，品牌口吻失控、响应延迟上升，最后又拆了回去。</p>
+<h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">三、一个真跑过 20-agent“一人公司”的人，踩了什么坑</h2>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">编的故事看多了会麻痹，说个真的。有位独立开发者公开发复盘过：他真的搭了一个约 20 个 Agent 的“AI 组织”来运营自己的一人公司——有总管 agent 每天早上给他写简报，有财务 agent、安全 agent、研究员 agent，各司其职，每个都有一份“绝对不许做的事”清单。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">他的原话很冷静：“这不是一篇‘AI 让你效率 10 倍’的文章。”</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">踩的坑，一个比一个有意思：</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>坑一：一个 Agent 挂了 8 小时。</strong>他让一个构建 agent 去测试服务，agent 没把服务放到后台，而是前台启动然后就卡在那儿，抱着进程坐了 472 分钟，全程还在不断孵化孤儿进程。他的总结：Agent 会以人类完全想不到的方式失败，所以编排器必须有看门狗定时器。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>坑二：配置文件被静默覆盖。</strong>有一阵构建莫名失败，查下来是一个 agent 把测试数据直接写在了真的 Dockerfile 上，而那个目录根本没被版本控制跟踪。他的解法：给关键文件做哈希校验，一旦意外变更就当场报错——护栏必须在犯错的那一刻大声失败，而不是三步之后的代码评审里。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;"><strong>坑三，也是最贵的一个：他造了 7 个产品，没有一个人要。</strong>他的 agent 舰队特别擅长“造东西”，几周内上线了 7 个真工具，测试齐全、部署完毕。但他复盘发现：每一个都是因为“市场看起来有需求”而造的，没有一个来自真实用户的拉力。凡是 push 出来的产品都是空心的，凡是 pull（他自己真的需要）出来的都活了下来。所以他给组织加了一道闸门：每个新构建开工前必须回答一个问题——“谁拉的这个？”他甚至设了一个只读 agent，存在的意义就是跟他说“不”。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">这个坑比 Token 账单贵多了。</p>
+<p style="margin:0;"><img src="https://i.imgur.com/L4XCB3q.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:32px 0 12px 0;line-height:1.5;">四、那普通人到底该怎么用？</h2>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">结论不是“别用多 Agent”，而是：<strong>多 Agent 解决的是并行，不是能力；放大的是产能，也是错误。</strong></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">真实的可行路径，其实朴素得多：</p>
+<ol style="padding-left:0;">
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>先把单 Agent 调明白。</strong>一个清晰的角色定义、一份明确的“不许做”清单、真实的工具接入。那位独立开发者说，20 个 agent 的价值里，九成来自 4 个提示词模式——它们装得进一个 system prompt，你现在的 AI 就能用。</li>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>只在“独立、可验证、不用扯皮”的任务上并行。</strong>跑测试、爬数据、批量改格式，这类任务并行 10 个 agent 是真赚；需要判断和交接的任务，并行只会放大混乱。</li>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>上护栏，趁早。</strong>看门狗、文件哈希、loud failure。Agent 的失败模式你永远想不到，护栏不是成本，是睡眠质量。</li>
+<li style="font-size:16px;line-height:1.75;color:#333333;margin:8px 0 8px 24px;list-style:disc;"><strong>算 Token 账，别算情绪账。</strong>上并行之前先问：这 15 倍开销买来的速度，对这件具体的事值不值？</li>
+</ol>
+<p style="margin:0;"><img src="https://i.imgur.com/7nUeKUX.jpeg" style="max-width:100%;display:block;margin:16px auto;"></p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">回到那条刷屏的帖子。它真正的价值不是那个“喝咖啡管理 AI 团队”的爽文画面，而是它逼每个人直面一个问题：</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">当造东西的成本趋近于零，稀缺的不再是执行力，而是判断力——知道什么值得造。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">那位独立开发者烧了几周才学会的，不是怎么指挥 20 个 agent，而是怎么让其中一个 agent 对自己说“不”。</p>
+<p style="font-size:16px;line-height:1.75;letter-spacing:0.5px;color:#333333;margin:16px 0;text-align:justify;">这可能是这一轮 AI 浪潮里，最反直觉也最重要的一课。</p>
+<p style="font-size:13px;color:#999;margin-top:40px;">参考：AI Engineer 大会演讲《Is the Agent Harness Dead?》；多 Agent 编排实测数据汇总（知乎）；独立开发者 20-agent 复盘（dev.to/@unbearablelabs）。</p></body>
